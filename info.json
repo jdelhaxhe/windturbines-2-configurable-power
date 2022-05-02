@@ -1,11 +1,11 @@
 {
-    "name": "windturbines-2",
-    "version": "1.1.0",
-    "title": "Wind Turbines 2",
-    "author": "OwnlyMe, Manuel Baesler",
+    "name": "windturbines-2-configurable-power",
+    "version": "0.1.0",
+    "title": "Wind Turbines 2 Configurable Power",
+    "author": "OwnlyMe, Manuel Baesler, ethanatos",
     "contact": "",
     "homepage": "",
     "factorio_version": "1.1",
     "dependencies": ["base >= 1.1"],
-    "description": "Animated wind turbines that turn into wind direction"
+    "description": "Fork of majuss, OwnlyMe and Manuel Baesler Animated wind turbines with configurable power setting"
 }
