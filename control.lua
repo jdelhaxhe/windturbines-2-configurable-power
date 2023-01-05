@@ -60,13 +60,6 @@ script.on_configuration_changed(function()
 		end
 		global.version = 4
 	end
-	if settings.startup["ownly_windturbines_locked_power"].value then
-		for a,b in pairs(global.turbines) do
-			if b.base and b.base.valid then
-				b.base.power_production = settings.startup["ownly_windturbines_base_power"].value/60*2^(b.level-1)
-			end
-		end
-	end
 end)
 			
 			
@@ -201,6 +194,8 @@ script.on_nth_tick(2, function(event)
 					turbine.last_speed = current_wind_speed
 					if not settings.startup["ownly_windturbines_locked_power"].value then
 						turbine.base.power_production  = settings.startup["ownly_windturbines_base_power"].value/60*2^(turbine.level-1)*(current_wind_speed/0.457)
+					else
+						turbine.base.power_production = settings.startup["ownly_windturbines_base_power"].value/60*2^(turbine.level-1)
 					end
 				end
 
